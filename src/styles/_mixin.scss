@@ -1,0 +1,15 @@
+@mixin flex($fd: row, $ai: center, $jc: center, $gap: 0px) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+  gap: $gap;
+  flex-wrap: wrap;
+}
+
+@mixin font($ff: "Inter", $fs: 14px, $fw: 400, $lh: 24px) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}

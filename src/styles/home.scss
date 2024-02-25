@@ -1,0 +1,154 @@
+main {
+  background-color: #fbfcfd;
+
+  > div {
+    margin: auto;
+
+    padding: 0 15px;
+
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  .main-header {
+    padding: 25px 0;
+
+    > h2 {
+      @include font("Inter", 48px, 400);
+      line-height: 60px;
+
+      color: #2c384a;
+
+      @media screen and (max-width: 768px) {
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+
+    > .horizontal-line {
+      margin: 5px 0;
+      max-width: 1024px;
+      width: 100%;
+      height: 1.33px;
+
+      background-color: #e1e4e6;
+    }
+
+    > .info-bar {
+      @include flex(row, center, space-between, 20px);
+
+      padding: 5px 0;
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
+
+      div {
+        @include flex(row, center, center, 20px);
+      }
+      span {
+        @include flex(row, center, center, 5px);
+        @include font("Inter", 14px, 400, 20px);
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          text-align: center;
+        }
+
+        color: #4b5665;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    > .action-button-container {
+      @include flex(row, center, flex-start, 20px);
+
+      padding: 15px 0;
+
+      span {
+        @include flex;
+        @include font("Inter", 13px, 400);
+
+        padding: 10px 20px;
+
+        border-radius: 12px;
+
+        background-color: #ffffff;
+        color: #4b5665;
+      }
+    }
+
+    > .pagination-links-container {
+      @include flex(row, center, flex-start, 10px);
+
+      a {
+        @include font;
+
+        color: #5c6874;
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .signup-container {
+    @include flex(row, center, center, 60px);
+
+    margin: 0 auto;
+    padding: 15px;
+
+    width: 100%;
+    max-width: 1024px;
+
+    h4 {
+      @include font("Inter", 32px, 400);
+      line-height: 44px;
+
+      color: #5c6874;
+
+      max-width: 398px;
+      width: 100%;
+    }
+
+    form {
+      @include flex(row, center, center);
+      input {
+        width: 348px;
+        height: 52px;
+
+        padding: 0 10px;
+
+        border: 1px solid #1b88f42a;
+        border-radius: 12px 0 0 12px;
+
+        background: #ffffff;
+
+        @media screen and (max-width: 768px) {
+          width: 300px;
+        }
+      }
+      button {
+        @include font("Inter", 14, 200);
+
+        line-height: 20px;
+        letter-spacing: 0.699999988079071px;
+        text-align: center;
+
+        width: 97px;
+        height: 52px;
+
+        border: none;
+        border-radius: 0 12px 12px 0;
+
+        background: #1b88f4;
+        color: #ffffff;
+      }
+    }
+  }
+}

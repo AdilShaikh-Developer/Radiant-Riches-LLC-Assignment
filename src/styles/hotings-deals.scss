@@ -1,0 +1,326 @@
+.hosting-deal-container {
+  @include flex(column, center, center, 10px);
+
+  .tag {
+    @include flex(row, center, center, 5px);
+    @include font("Inter", 16px, 400);
+    line-height: 24px;
+
+    align-self: flex-start;
+    position: relative;
+    top: 37px;
+    left: -6px;
+
+    margin-top: -25px;
+
+    width: 136px;
+    height: 34px;
+
+    border-radius: 0px 8px 8px 0px;
+
+    background-color: #ff7724;
+    color: #ffffff;
+  }
+
+  .index {
+    @include flex;
+    @include font("Inter", 20px, 400);
+    line-height: 28px;
+
+    align-self: flex-start;
+    position: relative;
+    top: 42px;
+    left: -22px;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid #e1e4e6;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    color: #626e79;
+
+    @media screen and (max-width: 768px) {
+      left: -6px;
+    }
+  }
+
+  .hosting-deal {
+    @include flex(row, center, space-evenly, 0);
+
+    margin-top: -45px;
+
+    max-width: 1024px;
+    width: 95%;
+    height: max-content;
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    .thumbnail-container {
+      @include flex(column, center, center, 10px);
+
+      img {
+        width: 141px;
+        height: 103px;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 50px;
+        }
+      }
+
+      span {
+        @include font("Inter", 13px, 400);
+
+        color: #626e79;
+      }
+    }
+
+    .deal-details-container {
+      @include flex(column, flex-start, flex-start, 5px);
+      max-width: 490px;
+      width: fit-content;
+
+      .deal-heading-container {
+        height: 72px;
+
+        p {
+          @include font("Inter", 16px, 400);
+          line-height: 24px;
+          color: #4b5665;
+
+          span {
+            @include font("Inter", 16px, 700);
+          }
+        }
+      }
+
+      > span {
+        @include font("Inter", 16px, 700);
+        line-height: 24px;
+        color: #2c384a;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 70px;
+        }
+      }
+      > p {
+        @include font("Inter", 16px, 400);
+        line-height: 24px;
+
+        color: #4b5665;
+
+        margin-left: 20px;
+      }
+      > .highlights {
+        margin-bottom: -40px;
+
+        > ul {
+          background: #fff4ed;
+          margin-left: 20px;
+        }
+
+        ul {
+          @include flex(column, flex-start, space-evenly);
+          max-width: 505px;
+          width: 100%;
+          height: 116px;
+
+          border-radius: 12px;
+
+          li {
+            @include flex(row, center, center, 5px);
+            @include font("Inter", 15px, 400);
+            line-height: 24px;
+
+            color: #4b5665;
+
+            padding: 0 5px;
+            > span {
+              @include flex;
+              @include font("Inter", 16px, 400);
+              line-height: 24px;
+
+              width: 40px;
+              height: 28px;
+
+              background: #ffffff;
+              color: #1b88f4;
+
+              border-radius: 4px;
+            }
+          }
+        }
+        > div {
+          padding: 10px 0;
+
+          > span {
+            @include font("Inter", 16px, 400);
+            line-height: 24px;
+            color: #2c384a;
+          }
+        }
+      }
+      > button {
+        @include flex(row, center, center, 5px);
+        @include font("Inter", 16px, 400);
+
+        margin-top: 22px;
+        color: #1b88f4;
+
+        border: none;
+        background-color: transparent;
+
+        svg {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+    .deal-extra-info-container {
+      @include flex(column, center, space-between);
+
+      height: 100%;
+
+      .deal-rating-container {
+        @include flex(column, center, space-evenly);
+        width: 135px;
+        height: 118px;
+
+        background: #f3f9ff;
+
+        border-radius: 0px 0px 12px 12px;
+
+        .rating {
+          @include font("Inter", 32px, 400);
+          line-height: 48px;
+
+          color: #074786;
+        }
+        .review {
+          @include font("Inter", 14px, 400);
+          line-height: 20px;
+
+          color: #074786;
+        }
+      }
+      button {
+        @include font("Inter", 16px, 400);
+
+        width: 232px;
+        height: 48px;
+
+        background: #1b88f4;
+        color: #ffffff;
+
+        border: none;
+        border-radius: 12px;
+
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.hosting-deal-container + div {
+  margin: 50px auto;
+
+  > h2 {
+    @include font("Inter", 32px, 400, 44px);
+    color: #2c384a;
+
+    @media screen and (max-width: 768px) {
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+
+  .related-deal-container {
+    @include flex(row, center, center, 15px);
+
+    .related-deal {
+      @include flex(column, center, center);
+
+      padding: 15px;
+
+      max-width: 300px;
+      width: 85%;
+      height: 425px;
+
+      border-radius: 12px;
+
+      background-color: #ffffff;
+
+      img {
+        width: 141px;
+        height: 103px;
+
+        margin: 30px 0;
+      }
+
+      .tags {
+        @include flex(row, center, flex-start, 10px);
+
+        span {
+          @include font("Inter", 13px, 400, 20px);
+
+          padding: 5px 10px;
+
+          border-radius: 8px;
+
+          background-color: #f2f4f7;
+          color: #074786;
+        }
+      }
+
+      h4 {
+        @include font("Inter", 16px, 700, 24px);
+        color: #626e79;
+
+        padding: 5px;
+      }
+
+      p {
+        @include font("Inter", 16px, 400, 24px);
+        color: #626e79;
+      }
+
+      .price-container {
+        @include flex(rows, center, flex-start, 10px);
+        width: 100%;
+        .price {
+          @include font("Inter", 20px, 400, 28px);
+          color: #5c6874;
+        }
+
+        div {
+          @include flex(rows, center, center, 10px);
+          margin-top: 5px;
+
+          .offer {
+            @include font("Inter", 14px, 400, 20px);
+            color: #9fa9b3;
+          }
+          .discount {
+            @include font("Inter", 13px, 400, 20px);
+            color: #ef4c5d;
+          }
+        }
+      }
+      button {
+        @include font("Inter", 16px, 400);
+
+        width: 100%;
+        height: 48px;
+
+        background: #1b88f4;
+        color: #ffffff;
+
+        border: none;
+        border-radius: 12px;
+
+        margin: 15px;
+      }
+    }
+  }
+}

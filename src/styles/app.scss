@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "./mixin";
+@import "./home";
+@import "./hotings-deals";
+@import "./media-query";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+input {
+  outline: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar ul {
+  @include flex(row, center, center, 50px);
+  @include font;
+
+  min-height: 64px;
+
+  background-color: #212731;
+  color: #d1d6da;
+
+  @media screen and (max-width: 768px) {
+    @include flex(column, center, center, 15px);
+    padding: 30px;
+  }
+
+  > .search-bar {
+    @include flex(row, center, center, 5px);
+
+    padding: 0;
+
+    border: 1px solid #e1e4e6;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    height: 37px;
+    width: 258px;
+
+    > svg {
+      height: 24px;
+      width: 24px;
+    }
+
+    > input {
+      border: none;
+
+      height: 80%;
+      width: calc(100% - 35px);
+    }
+  }
+}
+
+.footer {
+  @include flex(row, flex-start, space-evenly, 0);
+
+  padding-top: 7%;
+
+  height: 452px;
+
+  background-color: #212731;
+
+  ul {
+    @include flex(column, flex-start, center, 15px);
+
+    h4 {
+      @include font("Inter", 16px, 400);
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    li {
+      @include font;
+      color: #b6bdc4;
+    }
+  }
+
+  span {
+    @include flex;
+    @include flex(row, center, center, 5px);
+    @include font("Inter", 13px, 400);
+
+    margin-top: 5%;
+    color: #d1d6da;
+  }
+}
