@@ -67,7 +67,7 @@ main {
     > .action-button-container {
       @include flex(row, center, flex-start, 20px);
 
-      padding: 15px 0;
+      padding: 15px;
 
       span {
         @include flex;
@@ -148,6 +148,10 @@ main {
 
         background: #1b88f4;
         color: #ffffff;
+
+        @media screen and (max-width: 768px) {
+          border-radius: 12px;
+        }
       }
     }
   }
